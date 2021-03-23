@@ -6,6 +6,8 @@ var logger = require('morgan');
 var personRouter = require('./routes/person');
 
 var app = express();
+const basicAuth = require('express-basic-auth');
+app.use(basicAuth({users: { 'automat123': 'pass123' }}))
 
 app.use(logger('dev'));
 app.use(express.json());
