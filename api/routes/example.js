@@ -9,10 +9,25 @@ router.get('/allpersons',
                 response.json(err);
             }
             else{
+                console.log(dbResult);
                 response.json(dbResult);
             }
         }
         )
+    }
+);
+
+router.get('/oneperson/:id',
+    function(request, response){
+        example_sql.getOnePerson(request.params.id,function(err,dbResult){
+            if(err){
+                response.json(err);
+            }
+            else{
+                console.log(dbResult);
+                response.json(dbResult[0]);
+            }
+        })
     }
 );
 
