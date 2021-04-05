@@ -1,1 +1,1 @@
-# qt_example
+# qt_example/ Pekka Alaluukas
